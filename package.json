@@ -4,6 +4,7 @@
   "scripts": {
     "generate": "cargo run -p backend -- --openapi > openapi.json && openapi-gen-ts openapi.json frontend/src/api ",
     "dev": "cargo watch -w backend/ -w frontend/ -- cargo run",
+    "dev:quick": "pnpm --prefix frontend run build && cargo run -p backend",
     "build": "cargo build --release",
     "test": "cargo test && pnpm test --prefix frontend",
     "backend": "cargo run -p backend",

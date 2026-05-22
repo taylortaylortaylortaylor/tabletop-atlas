@@ -4,18 +4,18 @@
 
 	type Props = SVGAttributes<SVGSVGElement> & {
 		size?: number | string;
-		color?: 'red' | 'blue' | 'green' | 'yellow' | 'orange' | 'purple' | 'current';
+		color?: 'red' | 'blue' | 'green' | 'gold' | 'purple' | 'pink' | 'current';
 	};
 
 	let { size = 24, color = 'current', class: className, ...restProps }: Props = $props();
 
 	const colorMap = {
-		red: 'var(--game-red)',
-		blue: 'var(--game-blue)',
-		green: 'var(--game-green)',
-		yellow: 'var(--game-yellow)',
-		orange: 'var(--game-orange)',
-		purple: 'var(--game-purple)',
+		red: 'var(--brick-red)',
+		blue: 'var(--player-blue)',
+		green: 'var(--young-emerald)',
+		gold: 'var(--energetic-gold)',
+		purple: 'var(--wild-purple)',
+		pink: 'var(--social-pink)',
 		current: 'currentColor'
 	};
 </script>
@@ -25,13 +25,17 @@
 	width={size}
 	height={size}
 	viewBox="0 0 24 24"
-	fill={colorMap[color]}
+	fill="none"
+	stroke={colorMap[color]}
+	stroke-width="2"
+	stroke-linecap="round"
+	stroke-linejoin="round"
 	class={cn('inline-block', className)}
 	aria-hidden="true"
 	{...restProps}
 >
-	<!-- Meeple shape -->
-	<path
-		d="M12 2C10.5 2 9.5 3 9.5 4.5C9.5 5.5 10 6.3 10.7 6.7C9.3 7.5 8 9 8 11L6 11C5.4 11 5 11.4 5 12L5 21C5 21.6 5.4 22 6 22L9 22L9 16L15 16L15 22L18 22C18.6 22 19 21.6 19 21L19 12C19 11.4 18.6 11 18 11L16 11C16 9 14.7 7.5 13.3 6.7C14 6.3 14.5 5.5 14.5 4.5C14.5 3 13.5 2 12 2Z"
-	/>
+	<!-- Simplified meeple outline -->
+	<circle cx="12" cy="5" r="2.5" />
+	<path d="M8 11h8M8 11v10M16 11v10M9.5 21h5" />
+	<path d="M12 7.5v3.5M8 11L7 9.5M16 11L17 9.5" />
 </svg>

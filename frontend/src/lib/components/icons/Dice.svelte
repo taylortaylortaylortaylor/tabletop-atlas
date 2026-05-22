@@ -50,23 +50,23 @@
 	width={size}
 	height={size}
 	viewBox="0 0 24 24"
+	fill="none"
 	class={cn('inline-block', className)}
 	aria-hidden="true"
 	{...restProps}
 >
 	<!-- Dice body -->
 	<rect
-		x="2"
-		y="2"
-		width="20"
-		height="20"
-		rx="3"
-		fill="white"
+		x="3"
+		y="3"
+		width="18"
+		height="18"
+		rx="2"
 		stroke="currentColor"
 		stroke-width="2"
 	/>
 	<!-- Dots -->
 	{#each dotPositions[value] || [] as dot, i (i)}
-		<circle cx={dot.cx} cy={dot.cy} r="2" fill="currentColor" />
+		<circle cx={dot.cx} cy={dot.cy} r="1.5" fill="currentColor" />
 	{/each}
 </svg>

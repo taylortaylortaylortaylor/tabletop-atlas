@@ -23,30 +23,8 @@
 	aria-hidden="true"
 	{...restProps}
 >
-	<!-- Bottom card -->
-	<rect
-		x="4"
-		y="6"
-		width="14"
-		height="18"
-		rx="2"
-		fill="var(--parchment, #f5f5dc)"
-		stroke="currentColor"
-		transform="rotate(-8 11 15)"
-	/>
-	<!-- Middle card -->
-	<rect
-		x="5"
-		y="4"
-		width="14"
-		height="18"
-		rx="2"
-		fill="var(--parchment, #f5f5dc)"
-		stroke="currentColor"
-		transform="rotate(-4 12 13)"
-	/>
-	<!-- Top card -->
-	<rect x="6" y="2" width="14" height="18" rx="2" fill="white" stroke="currentColor" />
-	<!-- Card decoration -->
-	<path d="M10 8 L13 12 L10 16" stroke="currentColor" stroke-width="1.5" fill="none" />
+	<!-- Three flat aligned cards -->
+	<rect x="4" y="4" width="12" height="16" rx="1.5" />
+	<path d="M7 4v16M10 4v16" />
+	<rect x="8" y="4" width="12" height="16" rx="1.5" />
 </svg>

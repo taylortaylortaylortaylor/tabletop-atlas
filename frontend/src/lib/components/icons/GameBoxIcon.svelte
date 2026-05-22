@@ -23,19 +23,9 @@
 	aria-hidden="true"
 	{...restProps}
 >
-	<!-- Box bottom -->
-	<path
-		d="M3 9L12 4L21 9V18L12 23L3 18V9Z"
-		fill="var(--wood-light, #d4a574)"
-		stroke="currentColor"
-	/>
-	<!-- Box lid slightly open -->
-	<path d="M3 9L12 4L21 9" fill="none" stroke="currentColor" stroke-width="2" />
-	<path d="M12 4V2" stroke="currentColor" stroke-width="1.5" />
-	<!-- Box top edge -->
-	<path d="M3 9L12 14L21 9" stroke="var(--wood-dark, #8b6914)" stroke-width="1" />
-	<!-- Center line -->
-	<path d="M12 14V23" stroke="var(--wood-dark, #8b6914)" stroke-width="1" />
-	<!-- Decorative element on top -->
-	<circle cx="12" cy="14" r="2" fill="var(--gold-foil, #d4af37)" stroke="none" />
+	<!-- Simple flat box -->
+	<rect x="4" y="6" width="16" height="14" rx="1.5" />
+	<path d="M4 10h16M12 6v4" />
+	<line x1="8" y1="14" x2="10" y2="14" />
+	<line x1="14" y1="14" x2="16" y2="14" />
 </svg>
